@@ -1,0 +1,33 @@
+{
+  "name": "genpark-personal-agent-daily-information-diet-synthesizer-skill",
+  "version": "1.0.0",
+  "description": "Personal Agent Daily High-SNR Information Diet Synthesizer. Aggregates research papers, industry feeds, and executive memos, scores signal-to-noise ratios (SNR), penalizes clickbait and domain echo chambers, and distills personalized 3-minute executive briefings strictly fitting cognitive time budgets.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "synthesize_diet",
+      "description": "Filter and synthesize high SNR daily information diet within cognitive time budget.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "feed_items": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Feed items with title, summary, source_domain, word_count, and engagement_score."
+          },
+          "user_profile": {
+            "type": "object",
+            "description": "User profile with reading_time_budget_mins and interests list."
+          }
+        },
+        "required": [
+          "feed_items",
+          "user_profile"
+        ]
+      }
+    }
+  ]
+}
